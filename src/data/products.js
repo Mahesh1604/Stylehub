@@ -1,0 +1,267 @@
+const products = [
+  // Men's Clothing - Summer
+  {
+    id: 1,
+    name: "Men's Summer T-Shirt",
+    category: "men",
+    season: "summer",
+    price: 19.99,
+    image: "https://via.placeholder.com/300x400?text=Men+Summer+Tshirt",
+    description: "Lightweight and breathable t-shirt perfect for summer days.",
+    inStock: true,
+    rating: 4.5,
+    reviews: 120,
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    colors: ["White", "Black", "Blue", "Red"]
+  },
+  {
+    id: 2,
+    name: "Men's Casual Shorts",
+    category: "men",
+    season: "summer",
+    price: 24.99,
+    image: "https://via.placeholder.com/300x400?text=Men+Summer+Shorts",
+    description: "Comfortable cotton shorts for casual summer wear.",
+    inStock: true,
+    rating: 4.3,
+    reviews: 85,
+    sizes: ["S", "M", "L", "XL"],
+    colors: ["Beige", "Navy", "Olive", "Black"]
+  },
+  {
+    id: 3,
+    name: "Men's Summer Sandals",
+    category: "men",
+    season: "summer",
+    price: 29.99,
+    image: "https://via.placeholder.com/300x400?text=Men+Summer+Sandals",
+    description: "Durable and comfortable sandals for hot summer days.",
+    inStock: true,
+    rating: 4.1,
+    reviews: 64,
+    sizes: ["7", "8", "9", "10", "11", "12"],
+    colors: ["Brown", "Black"]
+  },
+
+  // Men's Clothing - Winter
+  {
+    id: 4,
+    name: "Men's Winter Jacket",
+    category: "men",
+    season: "winter",
+    price: 89.99,
+    image: "https://via.placeholder.com/300x400?text=Men+Winter+Jacket",
+    description: "Warm and waterproof jacket for cold winter days.",
+    inStock: true,
+    rating: 4.7,
+    reviews: 132,
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    colors: ["Black", "Navy", "Green"]
+  },
+  {
+    id: 5,
+    name: "Men's Wool Sweater",
+    category: "men",
+    season: "winter",
+    price: 49.99,
+    image: "https://via.placeholder.com/300x400?text=Men+Wool+Sweater",
+    description: "Classic wool sweater to keep you warm during winter.",
+    inStock: true,
+    rating: 4.4,
+    reviews: 98,
+    sizes: ["S", "M", "L", "XL"],
+    colors: ["Grey", "Navy", "Burgundy"]
+  },
+  {
+    id: 6,
+    name: "Men's Winter Boots",
+    category: "men",
+    season: "winter",
+    price: 79.99,
+    image: "https://via.placeholder.com/300x400?text=Men+Winter+Boots",
+    description: "Insulated boots with good grip for snowy conditions.",
+    inStock: true,
+    rating: 4.6,
+    reviews: 75,
+    sizes: ["7", "8", "9", "10", "11", "12"],
+    colors: ["Brown", "Black"]
+  },
+
+  // Women's Clothing - Summer
+  {
+    id: 7,
+    name: "Women's Summer Dress",
+    category: "women",
+    season: "summer",
+    price: 34.99,
+    image: "https://via.placeholder.com/300x400?text=Women+Summer+Dress",
+    description: "Light and flowy dress perfect for summer outings.",
+    inStock: true,
+    rating: 4.8,
+    reviews: 156,
+    sizes: ["XS", "S", "M", "L", "XL"],
+    colors: ["Floral", "Blue", "Yellow", "Pink"]
+  },
+  {
+    id: 8,
+    name: "Women's Crop Top",
+    category: "women",
+    season: "summer",
+    price: 17.99,
+    image: "https://via.placeholder.com/300x400?text=Women+Crop+Top",
+    description: "Stylish crop top for hot summer days.",
+    inStock: true,
+    rating: 4.2,
+    reviews: 89,
+    sizes: ["XS", "S", "M", "L"],
+    colors: ["White", "Black", "Red", "Blue"]
+  },
+  {
+    id: 9,
+    name: "Women's Summer Sandals",
+    category: "women",
+    season: "summer",
+    price: 32.99,
+    image: "https://via.placeholder.com/300x400?text=Women+Summer+Sandals",
+    description: "Comfortable and stylish sandals for summer.",
+    inStock: true,
+    rating: 4.4,
+    reviews: 112,
+    sizes: ["5", "6", "7", "8", "9", "10"],
+    colors: ["Tan", "White", "Black", "Gold"]
+  },
+
+  // Women's Clothing - Winter
+  {
+    id: 10,
+    name: "Women's Winter Coat",
+    category: "women",
+    season: "winter",
+    price: 99.99,
+    image: "https://via.placeholder.com/300x400?text=Women+Winter+Coat",
+    description: "Elegant and warm winter coat with faux fur collar.",
+    inStock: true,
+    rating: 4.9,
+    reviews: 178,
+    sizes: ["XS", "S", "M", "L", "XL"],
+    colors: ["Black", "Camel", "Red"]
+  },
+  {
+    id: 11,
+    name: "Women's Knit Sweater",
+    category: "women",
+    season: "winter",
+    price: 44.99,
+    image: "https://via.placeholder.com/300x400?text=Women+Knit+Sweater",
+    description: "Soft and cozy knit sweater for winter comfort.",
+    inStock: true,
+    rating: 4.6,
+    reviews: 145,
+    sizes: ["XS", "S", "M", "L", "XL"],
+    colors: ["Cream", "Grey", "Pink", "Blue"]
+  },
+  {
+    id: 12,
+    name: "Women's Winter Boots",
+    category: "women",
+    season: "winter",
+    price: 84.99,
+    image: "https://via.placeholder.com/300x400?text=Women+Winter+Boots",
+    description: "Stylish and warm boots for winter with anti-slip sole.",
+    inStock: true,
+    rating: 4.7,
+    reviews: 132,
+    sizes: ["5", "6", "7", "8", "9", "10"],
+    colors: ["Black", "Brown", "Grey"]
+  },
+
+  // Kids' Clothing - Summer
+  {
+    id: 13,
+    name: "Kids' Summer T-Shirt",
+    category: "kids",
+    season: "summer",
+    price: 14.99,
+    image: "https://via.placeholder.com/300x400?text=Kids+Summer+Tshirt",
+    description: "Colorful and comfortable t-shirt for kids in summer.",
+    inStock: true,
+    rating: 4.5,
+    reviews: 87,
+    sizes: ["2T", "3T", "4T", "5T", "6T"],
+    colors: ["Blue", "Red", "Green", "Yellow"]
+  },
+  {
+    id: 14,
+    name: "Kids' Shorts",
+    category: "kids",
+    season: "summer",
+    price: 16.99,
+    image: "https://via.placeholder.com/300x400?text=Kids+Shorts",
+    description: "Durable and comfortable shorts for active kids.",
+    inStock: true,
+    rating: 4.3,
+    reviews: 65,
+    sizes: ["2T", "3T", "4T", "5T", "6T"],
+    colors: ["Navy", "Khaki", "Blue", "Red"]
+  },
+  {
+    id: 15,
+    name: "Kids' Summer Sandals",
+    category: "kids",
+    season: "summer",
+    price: 19.99,
+    image: "https://via.placeholder.com/300x400?text=Kids+Summer+Sandals",
+    description: "Comfortable and easy-to-wear sandals for kids.",
+    inStock: true,
+    rating: 4.4,
+    reviews: 56,
+    sizes: ["5", "6", "7", "8", "9", "10", "11", "12", "13"],
+    colors: ["Blue", "Pink", "Green"]
+  },
+
+  // Kids' Clothing - Winter
+  {
+    id: 16,
+    name: "Kids' Winter Jacket",
+    category: "kids",
+    season: "winter",
+    price: 49.99,
+    image: "https://via.placeholder.com/300x400?text=Kids+Winter+Jacket",
+    description: "Warm and waterproof jacket to keep kids cozy in winter.",
+    inStock: true,
+    rating: 4.8,
+    reviews: 92,
+    sizes: ["2T", "3T", "4T", "5T", "6T"],
+    colors: ["Blue", "Red", "Purple", "Green"]
+  },
+  {
+    id: 17,
+    name: "Kids' Sweater",
+    category: "kids",
+    season: "winter",
+    price: 29.99,
+    image: "https://via.placeholder.com/300x400?text=Kids+Sweater",
+    description: "Soft and warm sweater for kids during cold days.",
+    inStock: true,
+    rating: 4.5,
+    reviews: 78,
+    sizes: ["2T", "3T", "4T", "5T", "6T"],
+    colors: ["Navy", "Red", "Grey"]
+  },
+  {
+    id: 18,
+    name: "Kids' Winter Boots",
+    category: "kids",
+    season: "winter",
+    price: 39.99,
+    image: "https://via.placeholder.com/300x400?text=Kids+Winter+Boots",
+    description: "Waterproof and insulated boots for kids in winter.",
+    inStock: true,
+    rating: 4.7,
+    reviews: 64,
+    sizes: ["5", "6", "7", "8", "9", "10", "11", "12", "13"],
+    colors: ["Black", "Pink", "Blue"]
+  }
+];
+
+export default products;
