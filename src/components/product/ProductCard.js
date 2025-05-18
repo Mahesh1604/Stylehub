@@ -10,7 +10,7 @@ import { getImageWithFallback, getPlaceholderByCategory } from '../../utils/imag
 
 const ProductCard = ({ product }) => {
   const [imgSrc, setImgSrc] = useState(getImageWithFallback(product.image, product.name));
-  const { id, name, price, image, rating, category, season } = product;
+  const { id, name, price, rating, category, season } = product;
   const { addToWishlist, removeFromWishlist, isInWishlist } = useWishlist();
   const { addToCart } = useCart();
   

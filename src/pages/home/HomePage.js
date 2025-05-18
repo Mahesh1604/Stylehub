@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Container, Row, Col, Card, Button, Carousel } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShippingFast, faUndo, faHeadset, faCreditCard } from '@fortawesome/free-solid-svg-icons';
 import ProductList from '../../components/product/ProductList';
 import products from '../../data/products';
-import { getImageWithFallback, getPlaceholderByCategory } from '../../utils/imageUtils';
+import { getPlaceholderByCategory } from '../../utils/imageUtils';
 
 const HomePage = () => {
   // Get featured products (first 8 products)

@@ -129,8 +129,8 @@ const Footer = () => {
             <h5 className="text-uppercase mb-3">Download Our App</h5>
             <p>Shop on the go with our mobile app.</p>
             <div className="d-flex gap-2">
-              <a href="#" className="btn btn-outline-light">App Store</a>
-              <a href="#" className="btn btn-outline-light">Google Play</a>
+              <a href="https://apps.apple.com" target="_blank" rel="noopener noreferrer" className="btn btn-outline-light">App Store</a>
+              <a href="https://play.google.com" target="_blank" rel="noopener noreferrer" className="btn btn-outline-light">Google Play</a>
             </div>
           </Col>
         </Row>

@@ -98,7 +98,13 @@ const ContactUsPage = () => {
                   <h6 className="mb-1">Live Chat</h6>
                   <p className="mb-0">
                     Available during business hours.<br />
-                    <a href="#" className="text-decoration-none">Start a Chat</a>
+                    <button 
+                      onClick={() => alert('Chat feature coming soon!')} 
+                      className="text-decoration-none border-0 bg-transparent p-0 text-primary"
+                      style={{ cursor: 'pointer' }}
+                    >
+                      Start a Chat
+                    </button>
                   </p>
                 </div>
               </div>
