@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
   faFacebook, 
-  faTwitter, 
+  faWhatsapp, 
   faInstagram, 
-  faPinterest 
+  faLinkedin 
 } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
@@ -19,17 +19,17 @@ const Footer = () => {
             <h5 className="text-uppercase mb-4">StyleHub</h5>
             <p>Your one-stop destination for trendy and seasonal clothing for the whole family.</p>
             <div className="d-flex gap-3 social-icons">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white">
+              <a href="https://www.facebook.com/profile.php?id=100066475867383" target="_blank" rel="noopener noreferrer" className="text-white">
                 <FontAwesomeIcon icon={faFacebook} size="lg" />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-white">
-                <FontAwesomeIcon icon={faTwitter} size="lg" />
+              <a href="https://wa.me/qr/632CEH75JPJMO1" target="_blank" rel="noopener noreferrer" className="text-white">
+                <FontAwesomeIcon icon={faWhatsapp} size="lg" />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white">
+              <a href="https://www.instagram.com/mr.maheshparmar?igsh=NWYxaWZyY281MjFq" target="_blank" rel="noopener noreferrer" className="text-white">
                 <FontAwesomeIcon icon={faInstagram} size="lg" />
               </a>
-              <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" className="text-white">
-                <FontAwesomeIcon icon={faPinterest} size="lg" />
+              <a href="https://www.linkedin.com/in/mahesh-parmar-0974012a2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" className="text-white">
+                <FontAwesomeIcon icon={faLinkedin} size="lg" />
               </a>
             </div>
           </Col>
