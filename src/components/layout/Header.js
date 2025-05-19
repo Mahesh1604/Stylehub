@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Navbar, Container, Nav, NavDropdown, Badge } from 'react-bootstrap';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faShoppingCart, faUser, faSearch, faHeart, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faShoppingCart, faUser, faSearch, faHeart, faBars, faTimes, faBackspace } from '@fortawesome/free-solid-svg-icons';
 import { useCart } from '../../context/CartContext';
 import { useWishlist } from '../../context/WishlistContext';
 import './Header.css';
@@ -42,6 +42,17 @@ const Header = () => {
     e.preventDefault();
     if (searchQuery.trim()) {
       navigate(`/products?search=${searchQuery}`);
+    }
+  };
+
+  // Function to remove last word from search query
+  const removeLastWord = () => {
+    const words = searchQuery.trim().split(' ');
+    if (words.length <= 1) {
+      setSearchQuery('');
+    } else {
+      words.pop(); // Remove the last word
+      setSearchQuery(words.join(' '));
     }
   };
 
@@ -152,19 +163,36 @@ const Header = () => {
             </NavDropdown>
           </Nav>
           
-          {/* Search Form */}
-          <form className="d-flex mx-auto search-form" onSubmit={handleSearch}>
-            <input
-              type="search"
-              className="form-control"
-              placeholder="Search products..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-            />
-            <button className="search-button" type="submit">
-              <FontAwesomeIcon icon={faSearch} />
-            </button>
-          </form>
+          {/* Search Form - Complete rebuild */}
+          <div className="mx-auto search-wrap">
+            <form onSubmit={handleSearch} className="search-box">
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Search products..."
+                className="search-input"
+                aria-label="Search products"
+              />
+              {searchQuery && (
+                <button
+                  type="button"
+                  onClick={removeLastWord}
+                  className="clear-btn"
+                  aria-label="Remove last word"
+                >
+                  <FontAwesomeIcon icon={faBackspace} />
+                </button>
+              )}
+              <button 
+                type="submit" 
+                className="search-btn"
+                aria-label="Submit search"
+              >
+                <FontAwesomeIcon icon={faSearch} />
+              </button>
+            </form>
+          </div>
           
           {/* User and Cart Icons */}
           <Nav className="ms-auto">
